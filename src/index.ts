@@ -6,18 +6,17 @@ import {
 import { IThemeManager } from '@jupyterlab/apputils';
 
 /**
- * Initialization data for the purpletheme extension.
+ * Initialization data for the @quansight-labs/jupyterlab-theme-winter extension.
  */
-const plugin: JupyterFrontEndPlugin<void> = {
-  id: 'purpletheme:plugin',
-  autoStart: true,
+const extension: JupyterFrontEndPlugin<void> = {
+  id: '@quansight-labs/jupyterlab-theme-winter',
   requires: [IThemeManager],
+  autoStart: true,
   activate: (app: JupyterFrontEnd, manager: IThemeManager) => {
-    console.log('JupyterLab extension purpletheme is activated!');
-    const style = 'purpletheme/index.css';
-
+    console.log('JupyterLab extension @quansight-labs/jupyterlab-theme-winter is activated!');
+    const style = '@quansight-labs/jupyterlab-theme-winter/index.css';
     manager.register({
-      name: 'purpletheme',
+      name: 'JupyterLab Winter',
       isLight: true,
       load: () => manager.loadCSS(style),
       unload: () => Promise.resolve(undefined)
@@ -25,4 +24,4 @@ const plugin: JupyterFrontEndPlugin<void> = {
   }
 };
 
-export default plugin;
+export default extension;

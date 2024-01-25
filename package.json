@@ -5,7 +5,8 @@
   "keywords": [
     "jupyter",
     "jupyterlab",
-    "jupyterlab-extension"
+    "jupyterlab-extension",
+    "jupyterlab-theme"
   ],
   "homepage": "https://github.com/danielreeder/purpletheme",
   "bugs": {
@@ -90,10 +91,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "jupyterlab": {
+  "jupyterlab": { 
     "extension": true,
-    "outputDir": "purpletheme/labextension",
-    "themePath": "style/index.css"
+    "themePath": "style/index.css",
+    "outputDir": "jupyterlab_theme_winter/labextension"
   },
   "eslintIgnore": [
     "node_modules",
